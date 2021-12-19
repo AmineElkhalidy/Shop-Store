@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ---------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ---------- REMIXICONS ---------- -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- ---------- SWIPER CSS ---------- -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
+    <!-- ---------- STYLE CSS ---------- -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Shopping Store</title>
+</head>
+<body>
+    <!-- ---------- HEADER ---------- -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-store-2-line nav__icon-flex"></i> Shop Store
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="ri-home-2-line nav__icon"></i>
+                            <span class="nav__name">Home</span>
+                        </a> 
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./products.html" class="nav__link">
+                            <i class="ri-shopping-bag-line nav__icon"></i>
+                            <span class="nav__name">Shop</span>
+                        </a> 
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./about.html" class="nav__link">
+                            <i class="ri-user-star-line nav__icon"></i>
+                            <span class="nav__name">About</span>
+                        </a> 
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./contact.html" class="nav__link">
+                            <i class="ri-send-plane-2-line nav__icon"></i>
+                            <span class="nav__name">Contact</span>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__btns">
+                <div class="nav__shop" id="cart-shop">
+                    <i class="ri-shopping-cart-line nav__icon-flex"></i>
+                </div>
+               
+                <div class="nav__user" id="nav-user">
+                    <a class="nav__link" href="./login.html">
+                        <i class="ri-user-line nav__icon-flex"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+    <!-- ---------- CART ---------- -->
+    <div class="cart" id="cart">
+        <i class="ri-close-line cart__close" id="cart-close"></i>
+
+        <h2 class="cart__title-center">My Cart</h2>
+
+        <div class="cart__container">
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./assets/img/feature1.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Headphones</h3>
+                    <span class="cart__price">$25</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="ri-subtract-line"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="ri-add-line"></i>
+                            </span>
+                        </div>
+
+                        <i class="ri-delete-bin-7-line cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./assets/img/feature2.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">Power Bank</h3>
+                    <span class="cart__price">$50</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="ri-subtract-line"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="ri-add-line"></i>
+                            </span>
+                        </div>
+
+                        <i class="ri-delete-bin-7-line cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart__card">
+                <div class="cart__box">
+                    <img src="./assets/img/feature3.png" alt="" class="cart__img">
+                </div>
+
+                <div class="cart__details">
+                    <h3 class="cart__title">EarPods</h3>
+                    <span class="cart__price">$15</span>
+
+                    <div class="cart__amount">
+                        <div class="cart__amount-content">
+                            <span class="cart__amount-box">
+                                <i class="ri-subtract-line"></i>
+                            </span>
+
+                            <span class="cart__amount-number">1</span>
+
+                            <span class="cart__amount-box">
+                                <i class="ri-add-line"></i>
+                            </span>
+                        </div>
+
+                        <i class="ri-delete-bin-7-line cart__amount-trash"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="cart__prices">
+            <span class="cart__price-item">3 items</span>
+            <span class="cart__price-total">$2880</span>
+        </div>
+
+        <div class="cart__actions">
+            <button class="cart__button">Empty Cart</button>
+            <button class="cart__button">Checkout</button>
+        </div>
+    </div>
+
+    <!-- ---------- MAIN ---------- -->
+    <main class="main">
+        <!-- ---------- HOME ---------- -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <img src="./assets/img/home.png" alt="" class="home__img">
+                <div class="home__data">
+                    <h2 class="home__title">
+                        Welcome To Our<br />Shopping Store
+                    </h2>
+
+                    <p class="home__description">
+                        Shop from the store and get<br /> the best quality of products.
+                    </p>
+
+                    <a href="#products" class="button">
+                        Explore
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- FEATURED PRODUCTS ---------- -->
+        <section class="section container featured">
+            <h2 class="section__title featured__section-title">Featured Products</h2>
+
+            <div class="featured__container grid">
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+                    <img src="./assets/img/feature1.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Headphone</h3>
+                        <span class="featured__price">$25</span>
+                    </div>
+                    
+                    <button class="featured__button">
+                        ADD TO CART
+                    </button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+                    <img src="./assets/img/feature2.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Power Bank</h3>
+                        <span class="featured__price">$50</span>
+                    </div>
+                    
+                    <button class="featured__button">
+                        ADD TO CART
+                    </button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+                    <img src="./assets/img/feature3.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">EarPods</h3>
+                        <span class="featured__price">$35</span>
+                    </div>
+                    
+                    <button class="featured__button">
+                        ADD TO CART
+                    </button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+                    <img src="./assets/img/feature4.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Apple Watch</h3>
+                        <span class="featured__price">$100</span>
+                    </div>
+                    
+                    <button class="featured__button">
+                        ADD TO CART
+                    </button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+                    <img src="./assets/img/img/new1.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Pack Back</h3>
+                        <span class="featured__price">$100</span>
+                    </div>
+                    
+                    <button class="featured__button">
+                        ADD TO CART
+                    </button>
+                </article>
+
+                <article class="featured__card">
+                    <span class="featured__tag">Sale</span>
+                    <img src="./assets/img/img/new3.png" alt="" class="featured__img">
+
+                    <div class="featured__data">
+                        <h3 class="featured__title">Glasses</h3>
+                        <span class="featured__price">$100</span>
+                    </div>
+                    
+                    <button class="featured__button">
+                        ADD TO CART
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- ---------- STORY ---------- -->
+        <section class="story section container">
+            <h2 class="section__title story__title">Our Story</h2>
+
+            <div class="story__container grid">
+                <img src="./assets/img/story.jpg" alt="" class="story__img">
+                <div class="story__data">
+                    <p class="story__description">
+                        The 'Shop Store' exists to offer to you the best client serving experience along with the best products on term of quality.<br />
+                        See what people say about us :
+                    </p>
+
+                    <a href="#testimonial" class="button story__button">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- PRODUCTS ---------- -->
+        <section class="products section container" id="products"> 
+            <h2 class="section__title products__title">Products</h2>
+
+            <div class="products__container grid">
+                <article class="products__card">
+                    <img src="./assets/img/feature1.png" alt="" class="products__img">
+
+                    <h3 class="product__title">Headphone</h3>
+                    <span class="products__price">$25</span>
+
+                    <button class="products__button">
+                        <i class="ri-shopping-bag-line products__icon"></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="./assets/img/feature2.png" alt="" class="products__img">
+
+                    <h3 class="product__title">Power Bank</h3>
+                    <span class="products__price">$50</span>
+
+                    <button class="products__button">
+                        <i class="ri-shopping-bag-line products__icon"></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="./assets/img/feature3.png" alt="" class="products__img">
+
+                    <h3 class="product__title">EarPods</h3>
+                    <span class="products__price">$35</span>
+
+                    <button class="products__button">
+                        <i class="ri-shopping-bag-line products__icon"></i>
+                    </button>
+                </article>
+
+                <article class="products__card">
+                    <img src="./assets/img/feature4.png" alt="" class="products__img">
+
+                    <h3 class="product__title">Apple Watch</h3>
+                    <span class="products__price">$100</span>
+
+                    <button class="products__button">
+                        <i class="ri-shopping-bag-line products__icon"></i>
+                    </button>
+                </article>
+            </div>
+            <a href="./products.html" class="button" >Explore More</a>
+            
+            
+        </section>
+
+        <!-- ---------- SPONSORS ---------- -->
+        <section class="sponsor section">
+            <h2 class="section__title sponsor__title">Brands</h2>
+            <div class="sponsor__container container grid">
+                <img src="./assets/img/img/logo1.png" alt="" class="sponsor__img">
+                <img src="./assets/img/img/logo2.png" alt="" class="sponsor__img">
+                <img src="./assets/img/img/logo3.png" alt="" class="sponsor__img">
+                <img src="./assets/img/img/logo4.png" alt="" class="sponsor__img">
+                <img src="./assets/img/huawei.png" alt="" class="sponsor__img-new">
+                <img src="./assets/img/apple.png" alt="" class="sponsor__img-new">
+                <img src="./assets/img/samsung.png" alt="" class="sponsor__img-new">
+            </div>
+        </section>
+
+        <!-- ---------- TESTIMONIAL ---------- -->
+        <section class="testimonial section container" id="testimonial">
+            <h2 class="section__title testimonial__title">Testimonial</h2>
+
+            <div class="swiper  testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class="ri-double-quotes-l"></i>
+                        </div>
+
+                        <p class="testimonial__description">
+                            This shop store is the best one, I always get the best product when i demand for one
+                            with best service and also with best pricing, i really recommend it for you.
+                        </p>
+
+                        <h3 class="testimonial__date">December 22. 2021</h3>
+
+                        <div class="testimonial__perfil">
+                            <img src="./assets/img/testimonial1.jpg" alt="" class="testimonial__img">
+
+                            <div class="testimonial__perfil-data">
+                                <span class="testimonial__perfil-name">Younesse Elkhalidy</span>
+                                <span class="testimonial__perfil-detail">Customer</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__quote-bottom">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class="ri-double-quotes-l"></i>
+                        </div>
+
+                        <p class="testimonial__description">
+                            This shop store is the best one, I always get the best product when i demand for one
+                            with best service and also with best pricing, i really recommend it for you.
+                        </p>
+
+                        <h3 class="testimonial__date">December 22. 2021</h3>
+
+                        <div class="testimonial__perfil">
+                            <img src="./assets/img/testimonial2.jpg" alt="" class="testimonial__img">
+
+                            <div class="testimonial__perfil-data">
+                                <span class="testimonial__perfil-name">Nawal Elkhalidy</span>
+                                <span class="testimonial__perfil-detail">Customer</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__quote-bottom">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class="ri-double-quotes-l"></i>
+                        </div>
+
+                        <p class="testimonial__description">
+                            This shop store is the best one, I always get the best product when i demand for one
+                            with best service and also with best pricing, i really recommend it for you.
+                        </p>
+
+                        <h3 class="testimonial__date">December 22. 2021</h3>
+
+                        <div class="testimonial__perfil">
+                            <img src="./assets/img/testimonial3.jpg" alt="" class="testimonial__img">
+
+                            <div class="testimonial__perfil-data">
+                                <span class="testimonial__perfil-name">Amine Elkhalidy</span>
+                                <span class="testimonial__perfil-detail">Customer</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__quote-bottom">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-line"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-line"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- NEW ---------- -->
+        <section class="new section container">
+            <h2 class="section__title new__section-title">New</h2>
+
+            <div class="new__container grid">
+
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+        
+                            <img src="./assets/img/img/new1.png" alt="" class="new__img">
+                            <div class="new__data">
+                                <h3 class="new__title">Back Pack</h3>
+                                <span class="new__price">$150</span>
+                            </div>
+        
+                            <button class="new__button">ADD TO CART</button>
+                        </article>
+        
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+        
+                            <img src="./assets/img/img/new2.png" alt="" class="new__img">
+                            <div class="new__data">
+                                <h3 class="new__title">Back Pack</h3>
+                                <span class="new__price">$150</span>
+                            </div>
+        
+                            <button class="new__button">ADD TO CART</button>
+                        </article>
+        
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+        
+                            <img src="./assets/img/img/new3.png" alt="" class="new__img">
+                            <div class="new__data">
+                                <h3 class="new__title">Back Pack</h3>
+                                <span class="new__price">$150</span>
+                            </div>
+        
+                            <button class="new__button">ADD TO CART</button>
+                        </article>
+        
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+        
+                            <img src="./assets/img/img/new4.png" alt="" class="new__img">
+                            <div class="new__data">
+                                <h3 class="new__title">Back Pack</h3>
+                                <span class="new__price">$150</span>
+                            </div>
+        
+                            <button class="new__button">ADD TO CART</button>
+                        </article>
+        
+                        <article class="new__card swiper-slide">
+                            <span class="new__tag">New</span>
+        
+                            <img src="./assets/img/img/new5.png" alt="" class="new__img">
+                            <div class="new__data">
+                                <h3 class="new__title">Back Pack</h3>
+                                <span class="new__price">$150</span>
+                            </div>
+        
+                            <button class="new__button">ADD TO CART</button>
+                        </article>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ---------- NEWSLETTER ---------- -->
+        <section class="newsletter section container">
+            <div class="newsletter__bg grid">
+                <div>
+                    <h2 class="newsletter__title">
+                        Subscribe Our <br /> Newsletter
+                    </h2>
+    
+                    <p class="newsletter__description">
+                        Don't miss out on your discount, Subscribe to the Newsletter
+                        to get the best offers, discounts, gifts and much more.
+                    </p>
+                </div>
+                <form action="" class="newsletter__subscribe">
+                    <input type="email" placeholder="Enter your email" class="newsletter__input">
+                    <button class="subscribe__button">
+                        SUBSCRIBE
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ---------- FOOTER ---------- -->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Our information</h3>
+
+                <ul class="footer__list">
+                    <li>Shop Store</li>
+                    <li>Ain Chock - Casablanca</li>
+                    <li>0506070809</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">About Us</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Support Center</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Customer Support</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">About us</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Copy right</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Product</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Road Bikes</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Mountain Bikes</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Electric</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Accesories</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Social</h3>
+
+                <ul class="footer__social">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer__copy">Amine Elkhalidy - All rights reserved.</span>
+    </footer>
+
+    <!-- ---------- EMPTY SECTION ---------- -->
+    <section class="section"></section>
+
+    <!-- ---------- SCROLL UP ---------- -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+    <!-- ---------- SCROLL REVEAL ---------- -->
+    <script src="./assets/js/scrollreveal.min.js"></script>
+
+    <!-- ---------- SWIPER JS ---------- -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!-- ---------- MAIN JS ---------- -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
